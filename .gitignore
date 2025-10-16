@@ -19,4 +19,4 @@ __pycache__/*
 config.ini
 
 # uv specific files (optional, depending on preference)
-# uv.lock  # If you choose not to commit your lock file
+uv.lock
