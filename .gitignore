@@ -1,0 +1,22 @@
+# Virtual environment
+.venv/
+
+# Byte-code files
+*.pyc
+*.pyo
+__pycache__/*
+
+# IDE specific files
+.vscode/
+
+# Data and logs
+*.log
+*.sqlite3
+/data/
+
+# Sensitive information
+.env
+config.ini
+
+# uv specific files (optional, depending on preference)
+# uv.lock  # If you choose not to commit your lock file
