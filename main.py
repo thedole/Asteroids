@@ -2,6 +2,7 @@
 # the open-source pygame library
 # throughout this file
 import pygame
+import sys
 
 from constants import *
 from player import Player
@@ -54,6 +55,12 @@ def main():
                 return
         screen.fill(0)
         updateable.update(dt)
+
+        for asteroid in asteroids:
+            if asteroid.is_colliding(player):
+                print("Game over!")
+                sys.exit(1)
+
         for o in drawable:
             o.draw(screen)
         pygame.display.flip()
