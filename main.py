@@ -70,7 +70,7 @@ def main():
             for shot in shots:
                 if asteroid.is_colliding(shot):
                     shot.kill()
-                    asteroid.kill()
+                    asteroid.got_shot()
 
         for o in drawable:
             o.draw(screen)
