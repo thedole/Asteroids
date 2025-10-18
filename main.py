@@ -53,10 +53,12 @@ def main():
     player = Player(x, y)
     asteroid_field = AsteroidField()
 
+    # -------- Game loop --------
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
+            
         screen.fill(0)
         updateable.update(dt)
 
@@ -64,6 +66,11 @@ def main():
             if asteroid.is_colliding(player):
                 print("Game over!")
                 sys.exit(1)
+
+            for shot in shots:
+                if asteroid.is_colliding(shot):
+                    shot.kill()
+                    asteroid.kill()
 
         for o in drawable:
             o.draw(screen)
